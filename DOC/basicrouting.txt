@@ -1,0 +1,18 @@
+//01
+// app.get('/',(req, res) => {
+//     res.send("welcome to express js") // browse the localhost:8000 , you can read this
+// })
+
+//02. basic routing
+app.get('/', (req, res) =>{
+    res.send("Home")
+} )
+
+//localhost:8000/about
+app.get('/about', (req, res) => {
+    res.send("<h1> About section 😍 </h1>")
+})
+//localhost:8000/contact
+app.get('/contact', (req, res) => {
+    res.send("<h1> contact section 🫙 </h1>")
+})

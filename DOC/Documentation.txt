@@ -15,3 +15,11 @@
 //navigate the getting start and installing
 
 //install express -> npm install express
+
+
+//basic routing -> //01. install nodemon -> npm i nodemon
+// after install the nodemon then edit the package.json "test" rename to "dev": "nodemon index.js"
+//then you don't need to run the code again and again
+// you can run one time to whole code 
+// npm run dev
+

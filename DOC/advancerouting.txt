@@ -1,0 +1,27 @@
+//http methods
+//GET => Retrive the data
+//POST => create/insert the data
+//PUT => completely update the data
+//PATCH =>partially update the data
+//DELETE => Delete the data
+//All => any http requst method
+
+
+//string pattern
+app.get('/ab?cd', (req, res) =>{
+    res.send("if the user hit (acd) or (abcd) then this will run")
+})
+
+
+//regex
+
+
+//http://localhost:8000/acdx
+// app.get (/x/ , (req, res) => {
+//     res.send("if the path include letter (x) it will work")
+// })
+
+//http://localhost:8000/users/1234
+app.get(/^\/users\/[0-9]{4}$/, (req, res) =>{
+    res.send("only works for user/4digits")
+})

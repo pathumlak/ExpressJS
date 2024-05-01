@@ -1,15 +1,8 @@
 import express from 'express'
+import students from './routers/student.js'
 const app =  express();
 
-app.param("id", (req, res ,next, id) => {
-    console.log(`id : ${id}`);
-    next();
+app.use('/students', students)
 
-})
-
-app.get('/user/:id' ,(req, res) =>{
-    console.log("this is user id ");
-    res.send("response ok")
-} )
 
 app.listen(8000, ()=> console.log("server up"))

@@ -1,0 +1,42 @@
+import express from 'express'
+
+
+const app =  express();
+
+//route params
+// ecom/products/iphone/:iphonex
+
+
+// http://localhost:8000/student/delete/15
+// app.get('/student/delete/:id',(req,res) =>{
+//     res.send("user deleted")
+// })
+
+app.get('/ecom/products/:category/:id' ,(req, res) =>{
+    const{category , id} = req.params;
+    res.send(`product category is ${category} and product id: ${id}`)
+})
+
+
+
+
+app.listen(8000, ()=> console.log("server up"))
+
+
+
+//
+import express from 'express'
+const app =  express();
+
+app.param("id", (req, res ,next, id) => {
+    console.log(`id : ${id}`);
+    next();
+
+})
+
+app.get('/user/:id' ,(req, res) =>{
+    console.log("this is user id ");
+    res.send("response ok")
+} )
+
+app.listen(8000, ()=> console.log("server up"))

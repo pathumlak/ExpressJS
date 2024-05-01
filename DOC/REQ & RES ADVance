@@ -1,0 +1,16 @@
+//1 more than callback function
+
+//when you add a next function then callback single and after callback second
+
+//http://localhost:8000/double-cb
+
+app.get('/double-cb', (req, res , next)=> {
+    //  res.send("single callback")
+    console.log("first");
+    next();
+}, 
+(req, res) =>{
+    //  res.send("second callback")
+    console.log("second");
+}
+)

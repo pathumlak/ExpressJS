@@ -1,0 +1,70 @@
+//import express 
+import express from 'express';
+
+const app = express()
+
+console.clear()
+
+
+const cb1 =  (req, res, next) => {
+    console.log("1st");
+    next()
+}
+const cb2 =  (req, res,next) => {
+    console.log("2nd");
+    next()
+}
+const cb3 =  (req, res) => {
+    res.send("back to 3rd")
+    console.log("3rd");
+}
+
+//array callback
+app.get("/array", [cb1, cb2, cb3]);
+
+
+
+
+
+app.listen(8000, ()=> console.log("server up"))
+
+
+
+
+///
+//import express 
+import express from 'express';
+
+const app = express()
+
+console.clear()
+
+
+const cb1 =  (req, res, next) => {
+    console.log("1st");
+    next()
+}
+const cb2 =  (req, res,next) => {
+    console.log("2nd");
+    next()
+}
+
+
+//array callback
+app.get("/array", [cb1, cb2], 
+(req, res, next) => {
+    console.log("third");
+    next()
+
+}, (req, res) => {
+    res.send("yoyo crazy")
+
+} );
+
+
+
+
+
+app.listen(8000, ()=> console.log("server up"))
+
+

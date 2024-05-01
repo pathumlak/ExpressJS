@@ -25,3 +25,9 @@ app.get('/ab?cd', (req, res) =>{
 app.get(/^\/users\/[0-9]{4}$/, (req, res) =>{
     res.send("only works for user/4digits")
 })
+
+
+//http://localhost:8000/product/iphone
+app.get('/product/iphone' ,(req, res) => {
+    res.send("this will work only provide product/iphone")
+})

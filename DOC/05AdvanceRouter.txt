@@ -1,0 +1,18 @@
+//01.create routes folder and put your routes in a seperate file
+//02. create instance of express.router()
+//03. Instead of app.method change that to "router.method"
+//04. export router
+//05. import router
+//06.use the (app.use) built-in iddleware & provide your rout0es
+
+import express from 'express'
+import student from './routes/student.js'
+import teacher from './routes/teacher.js'
+
+const app =  express();
+
+app.use('/students', student);
+app.use('/teachers' ,teacher)
+
+
+app.listen(8000, ()=> console.log("server up"))

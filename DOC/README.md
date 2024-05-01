@@ -1,3 +1,0 @@
-# ExpressJS
-You will learn ExpressJS with example 
-Here we go....

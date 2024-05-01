@@ -1,0 +1,47 @@
+//1 more than callback function
+
+//when you add a next function then callback single and after callback second
+
+//http://localhost:8000/double-cb
+
+app.get('/double-cb', (req, res , next)=> {
+    //  res.send("single callback")
+    console.log("first");
+    next();
+}, 
+(req, res) =>{
+    //  res.send("second callback")
+    console.log("second");
+}
+)
+
+
+/////
+//import express 
+import express from 'express';
+
+const app = express()
+
+// app.get('/student' , (req, res) => {
+//     res.send("raed the students")
+// })
+// app.post('/student', (req, res) => {
+//     res.send("create the student")
+// })
+// app.put('/student', (req,res) =>{
+//     res.send("update the students")
+// })
+// app.delete('/student', (req, res)=>{
+//     res.send("delete student")
+// })
+
+//refactor
+app
+.route('/student')
+.get((req,res) => res.send("all students"))
+.post((req, res) => res.send("create student"))
+.put((req, res) => res.send("update student"))
+.delete((req, res) => res.send("delete student"));
+
+
+app.listen(8000, ()=> console.log("server up"))

@@ -8,3 +8,4 @@ const server = http.createServer((req, res) =>{
 server.listen(8000, ()=> console.log("server up"))
 
 // you have to open the browser and type localhost:8000
+

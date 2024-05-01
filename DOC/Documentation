@@ -8,3 +8,10 @@
 // before start the express js cd to current dir  using terminal
 //then hit => npm init -y to get package.json
 //then add the package.json "type":"module"
+//each files you have to do this
+
+
+// start the expressjs goto expressjs.com site
+//navigate the getting start and installing
+
+//install express -> npm install express

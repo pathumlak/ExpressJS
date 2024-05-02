@@ -1,15 +1,13 @@
-import express from "express";
+import express from 'express';
+import data from './products.js'
 
-const app =  express();
-console.clear();
+const app = express();
+console.clear()
 
-//qury string ? 
-app.get('/product' , (req, res) =>{
-   const {category, id } = req.query
-
-   res.send(`product category is : ${category} and id is: ${id}`)//localhost:8000/product?category=iphone&id=15
-   //outpur-> product category is : iphone
-
+app.get('/products', (req, res)=>{
+   res.json(data)
 })
+
+
 
 app.listen(8000, ()=> console.log("server up"))
